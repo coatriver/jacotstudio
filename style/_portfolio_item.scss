@@ -1,0 +1,185 @@
+// Add to header, .project-header
+.vitavi-bg {
+    background-color: $vitavi-color;
+}
+
+.parentreprise-bg {
+    background-color: $parentreprise-color;
+}
+
+// Add to .portfolio-view-intro>h1, .domain-year-item>p 
+.vitavi-color {
+    color: $vitavi-color;
+}
+
+.parentreprise-color {
+    color: $parentreprise-color;
+}
+
+.img-project {
+    text-align: center;
+    background-color: $white-color;
+    @include marges;
+    img {
+        width: 100%;
+        display: block;
+        max-width: 860px;
+        margin:auto;
+        padding: 3em 0;
+    }
+    .gifs-vitavi {
+        img{
+            display: inline;
+            padding:0;
+            margin: 2em 0;
+            max-width: 288px;
+            border: 1px solid rgba($tertiary-color, 0.2);
+        }
+    }
+}
+
+.portfolio-view-container {
+    .project-header {
+        text-align: center;
+        @include laptop {
+            padding-top: 58px;
+        }
+        @include laptop-l {
+            padding-top: 64px;
+        }
+        img {
+            width: 280px;
+            margin: 1em 0;
+            @include tablet {
+                width: 300px;
+            }
+        }
+    }
+    .project-subheader {
+        
+        h1 {
+            display: block; // color: $vitavi-color;
+            margin: 0;
+            text-align: center;
+            font-family: 'montserratbold';
+            font-size: 2em;
+            padding-top: 1em;
+        }
+        @include marges;
+        background-color: $white-color;
+        color: black;
+        margin: 0;
+        @include laptop {
+            padding: 0 8em;
+        }
+        .project-subheader-subtitle {
+            max-width: 860px;
+            @include laptop {
+                display: flex;
+                padding: 2em 0;
+                margin: auto;
+            }
+            .portfolio-view-intro {
+                position: relative;
+                width: 100%;
+                margin: auto;
+                p {
+                    font-family: 'montserratregular';
+                    font-size: 1.1em;
+                    line-height: 1.4em;
+                    color: rgba($tertiary-color, 0.6);
+                    margin: 1em 0 1.6em 0;
+                    @include laptop {
+                        margin:0 5em 0 0em;
+                    }
+                }
+            }
+            .domain-year {
+                padding-bottom: 2em;
+                max-width: 860px;
+                margin: auto;
+                @include laptop {
+                    margin: 0;
+                }
+                .domain-year-item {
+                    &:nth-child(2) {
+                        margin: 1em 0;
+                    }
+                    h4 {
+                        font-family: 'montserratregular';
+                        color: rgba($tertiary-color, 0.7);
+                        margin: 0;
+                        display: inline;
+                    }
+                    p {
+                        display: inline;
+                        font-family: 'montserratbold';
+                        margin: 0;
+                        margin-left: 0.3em;
+                    }
+                }
+            }
+        }
+    }
+    .buttons-next-previous-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: $white-color;
+        padding: 1em 0;
+        @include tablet {
+            justify-content: space-around;
+            padding: 2em 20%;
+        }
+        @include laptop {
+            padding: 2em 30%;
+        }
+        .pn-buttton {
+            display: flex;
+            position: relative;
+            :nth-child(1) {
+                margin-right: 104px;
+                @include tablet {
+                    margin-right: 0;
+                }
+            }
+            @include tablet {
+                width: 112px;
+                border: 1px solid $secondary-color;
+                padding: 16px 16px;
+                margin: 0;
+            }
+            svg {
+                width: 14px;
+                fill: $secondary-color;
+                border: 1px solid $secondary-color;
+                padding: 16px 20px;
+                @include tablet {
+                    border: none;
+                    padding: 0;
+                }
+            }
+            a {
+                font-family: 'montserratsemibold';
+                text-decoration: none;
+                color: $secondary-color;
+                display: none;
+                @include tablet {
+                    display: block;
+                    padding: 0 12px;
+                }
+            }
+        }
+        .previous-btn {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        .next-btn {
+            svg {
+                position: absolute;
+                right: 16px;
+            }
+        }
+    }
+}
